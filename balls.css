@@ -1,0 +1,101 @@
+body{
+    display: flex;
+    width: 100%;
+    margin: 0;
+    height: 100vh;
+}
+.ball{
+    width: 50px;
+    height: 50px;
+    position: relative;
+    margin: 50px auto;
+    border-radius: 50%;
+    justify-content: space-evenly;
+    animation-name: fall;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+.ball1{
+    background: conic-gradient(rgba(255, 0, 0, 0.6), rgba(255, 255, 0, 0.6), rgba(0, 255, 0, 0.6), rgba(0, 255, 255, 0.6), rgba(0, 0, 255, 0.600), rgba(255, 0, 255, 0.6), rgba(255, 0, 0, 0.6));
+    animation-name: ball1;
+    animation-duration: 3s;
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.ball2{
+    background-image: repeating-linear-gradient(0deg,rgb(128, 0, 117) 0%, rgb(128, 0, 117) 50%, rgb(110, 229, 242) 50%, rgb(0, 115, 128));
+    animation-name: ball2;
+    animation-duration: 3s;
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+    animation-delay: 0.1s;
+}
+.ball3{
+  background: radial-gradient(circle at 65% 15%, white 1px, aqua 3%, darkblue 60%, aqua 100%);  
+    animation-name: ball3;
+    animation-duration: 3s;
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+    animation-delay: 0.2s;
+}
+.ball4{
+    background-image: repeating-linear-gradient(0deg,rgb(0, 115, 128) 0%, rgb(0, 115, 128) 50%, rgb(110, 229, 242) 50%, rgb(110, 229, 242));
+    animation-name: ball4;
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+    animation-delay: 0.3s;
+}
+@keyframes ball1 {
+    0% {
+        top: 0px;
+      }
+      50% {
+        top: 249px;
+        background: conic-gradient(red, yellow, lime, aqua, blue, magenta, red);
+      }
+      100% {
+        top: 0px;
+        box-shadow:
+            0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+            0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+            0 12.5px 10px rgba(0, 0, 0, 0.06),
+            0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+            0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+            0 100px 80px rgba(0, 0, 0, 0.12);
+      }
+}
+
+@keyframes ball2 {
+    0% {
+        top: 0px;
+      }
+      50% {
+        top: 249px;
+        background-image: repeating-linear-gradient(0deg,rgb(90, 235, 252) 20%, rgb(128, 0, 117) 50%, rgb(110, 229, 242), rgb(128, 0, 117));
+      }
+      100% {
+        top: 0px;
+      }
+}
+
+@keyframes ball3 {
+    0% {
+        top: 0px;
+      }
+      50% {
+        top: 249px;
+        /* background-image: linear-gradient(#FFDEB4 0%, #FFDEB4 50%, #3330E4 50%,#3330E4); */
+      }
+      100% {
+        top: 0px;
+      }
+}
+
+@keyframes ball4{
+    0% {
+        top: 0px;
+      }
+      50% {
+        top: 249px;
+        background-image: repeating-linear-gradient(0deg,rgb(110, 229, 242) 10%, rgb(0, 115, 128) 50%, rgb(110, 229, 242) 50%, rgb(110, 229, 242));
+      }
+      100% {
+        top: 0px;
+      }
+}
